@@ -1,0 +1,66 @@
+.header {
+    font-family: Arial, Helvetica, sans-serif;
+    
+        &__logo {
+            text-align: center;
+        }
+    
+        &__img {
+            max-width: 350px;
+        }
+        
+        .menu {
+            &__list {
+                display: flex;
+                justify-content: center;
+                border-top: 1px solid $cinzaClaro;
+                border-bottom: 1px solid $cinzaClaro;
+                margin-left: auto;
+                margin-right: auto;
+                @include phone {
+                    flex-wrap: wrap;
+                    padding: 15px 0;
+                    width: 90%;
+                }            
+                
+                @include tablet {
+                    padding: 20px 0;
+                    width: 80%;
+                }            
+               
+                @include desktop {
+                    padding: 20px 0;
+                    width: 80%;
+                }            
+            }
+    
+            &__links {
+                position: relative;
+                @include phone {
+                    padding: 5px 0;
+                }
+    
+                &:not(:last-child)::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: -3px;
+                    margin: auto;
+                    height: 15px;
+                    width: 1px;
+                    background-color: $cinzaClaro;
+                }
+            }
+    
+            &__link {
+                padding: 0 25px;
+                color: $cinzaEscuro;
+    
+                &:hover {
+                    color: $roxo;
+                }
+            }
+        }
+    }
+    

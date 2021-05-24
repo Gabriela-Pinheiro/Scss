@@ -1,0 +1,20 @@
+/*Este trecho de estilo refer-se ao rodapé do blog*/
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    // Este trecho de estilo refere-se a posição do footer
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &__logo {
+        max-width: 100px;
+    }
+
+    &__text {
+        margin: auto;
+        @include tamanhoFonte(14px);
+    }
+}
